@@ -1,0 +1,11 @@
+query Posts {
+	posts(orderBy: publishedAt_DESC) {
+		title
+		slug
+		excerpt
+		publishedAt
+		coverImage {
+			url(transformation: {image: {resize: {width: 400}}})
+		}
+	}
+}
